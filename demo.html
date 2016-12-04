@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+        padding:0;
+        margin:0;
+        }
+        .aaa{
+            height: 300px;
+            background-color: aqua;
+        }
+        .bbb{
+            height:50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: #ccc;
+            position: absolute;
+            width: 100%;
+        }
+        .content{
+            padding-top: 50px;
+        }
+        body{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+<div class="aaa">button</div>
+<div class="bbb">bbb</div>
+<section class="content">
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+    <div>123</div>
+</section>
+
+<script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.js"></script>
+<script>
+    var $b = $('.bbb'), bTop = $b.offset().top,flag = true;
+    if($(document).scrollTop() > bTop && flag){
+        flag = false;
+        $b.css({
+            'position':'fixed',
+            'top':'0',
+            'width':'100%'
+        });
+    }
+    $(document).on('scroll',function(){
+        if($(document).scrollTop() > bTop && flag){
+            flag = false;
+            $b.css({
+                'position':'fixed',
+                'top':'0',
+                'width':'100%'
+            });
+        }else if($(document).scrollTop() <= bTop ){
+            flag = true;
+            $b.css({
+                'position':'absolute',
+                'top':bTop + 'px'
+            })
+        }
+    })
+</script>
+</body>
+</html>
